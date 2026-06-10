@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top top-catalog center">
+
+        <header class="top-header">
+            <a href="index.html"><img class="top-logo-white" src="img/logo.svg" alt="Логотип"></a>
+            <input placeholder="Поиск" class="top-header__input" type="text">
+            <div>
+                <nav>
+                    <ul class="top-menu menu">
+                        <li><a class="top-menu__link" href="Catalog.html">Каталог</a></li>
+                        <li><a class="top-menu__link" href="Cart.html">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="top-menu__mobile">
+                <div><a href="#"><img src="img/ikon-lupa.png" alt="Поиск"></a></div>
+                <div><a href="Catalog.html"><img src="img/ikon-catalog.png" alt="Каталог"></a></div>
+                <div> <a href="Cart.html"><img src="img/ikon-cart.png" alt="Корзина"></a></div>
+            </div>
+
+        </header>
+
+        <section class="top-title">
+            <h1 class="top-title__big top-title__big_catalog">Каталог</h1>
+        </section>
+
+    </div>
+
+    <main class="product-box center">
+
+        <section class="top-navigation">
+
+            <div class="top-nav">
+                <nav>
+                    <ul class="top-nav menu">
+                        <li><a class="top-nav__link" href="index.html">Главная</a></li>
+                        <li>
+                            <p>/</p>
+                        </li>
+                        <li><a class="top-nav__link" href="Catalog.html">Каталог товаров</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="top-nav__button">
+
+                <select style="padding-left: 23px;" class="top__button_filtr">
+                    <option class="top__button_title-filtr">Фильтрация</option>
+                    <option value="time">Сроки доставки</option>
+                    <option value="brend">Бренд</option>
+                    <option value="salesman">Продавец</option>
+                    <option value="color">Цвет</option>
+                    <option value="sex">Пол</option>
+                </select>
+
+                <select style="padding-left: 23px;" class="top__button_popul">
+                    <option value="popular" class="top__popular"> По популярности</option>
+                    <option value="new">Сперва новые</option>
+                    <option value="price">По цене</option>
+                </select>
+
+                <!-- <button class="top__button_popul">
+                    <div class="top__popular">По популярности</div>
+                    <div>
+                        <a class="top-strelka" href="strelka.svg"><img src="img/catalog/strelka.svg"
+                                alt="Стрелка вниз"></a>
+                    </div>
+                </button> -->
+                <!-- Оставила для себя пример создания кнопки со стрелкой -->
+            </div>
+
+            <form class="top-nav__form" action="#" method="get">
+                <div class="form-box">
+                    <div class="form-box__top">
+                        <div class="form-box__top_left">
+
+                            <fieldset class="form-box__fieldset form-box__fieldset_time">
+                                <legend class="form-box__title">Сроки доставки</legend>
+                                <div>
+                                    <input class="form-box__radio" id="no-matter" type="radio" name="time">
+                                    <label class="form-box__label" for="no-matter">Неважно</label>
+                                </div>
+                                <div>
+                                    <input class="form-box__radio" id="today" type="radio" name="time">
+                                    <label class="form-box__label" for="today">Сегодня</label>
+                                </div>
+                                <div>
+                                    <input class="form-box__radio" id="tomorrow" type="radio" name="time">
+                                    <label class="form-box__label" for="tomorrow">Завтра</label>
+                                </div>
+                                <div>
+                                    <input class="form-box__radio" id="tree-day" type="radio" name="time">
+                                    <label class="form-box__label" for="tree-day">До 3 дней</label>
+                                </div>
+                                <div>
+                                    <input class="form-box__radio" id="seven-day" type="radio" name="time">
+                                    <label class="form-box__label" for="seven-day">До 7 дней</label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="form-box__fieldset form-box__fieldset_price">
+                                <legend class="form-box__title">Цена</legend>
+
+                                <div class="form-box__title_price">
+                                    <span class="form-box__price form-box__price_min">от 0 руб.</span>
+                                    <span class="form-box__price form-box__price_max">до 100000 руб.</span>
+                                </div>
+
+                                <div class="form-box__range_slider">
+
+                                    <input type="range" class="form-box__range_min" id="slider" value="0" min="0"
+                                        max="100000">
+
+                                    <input type="range" class="form-box__range_max" id="slider" value="100000" min="0"
+                                        max="100000">
+
+                                    <div class="form-box__range_track">
+                                        <div class="form-box__range_track-fill"></div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                            <fieldset class="form-box__fieldset form-box__fieldset_color">
+                                <legend class="form-box__title">Цвет</legend>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_white" id="white"
+                                        type="checkbox"><label for="white"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_black" id="black"
+                                        type="checkbox"><label for="black"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_grey" id="grey"
+                                        type="checkbox"><label for="grey"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_red" id="red"
+                                        type="checkbox"><label for="red"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_orange" id="orange"
+                                        type="checkbox"><label for="orange"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_yellow" id="yellow"
+                                        type="checkbox"><label for="yellow"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_green" id="green"
+                                        type="checkbox"><label for="green"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_lightgreen"
+                                        id="lightgreen" type="checkbox"><label for="lightgreen"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_lightblue" id="lightblue"
+                                        type="checkbox"><label for="lightblue"></label>
+                                </div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_blue" id="blue"
+                                        type="checkbox"><label for="blue"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_purple" id="purple"
+                                        type="checkbox"><label for="purple"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_lilac" id="lilac"
+                                        type="checkbox"><label for="lilac"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_lightlilac"
+                                        id="lightlilac" type="checkbox"><label for="lightlilac"></label></div>
+
+                                <div><input class="form-box__checkbox_color form-box__checkbox_pink" id="pink"
+                                        type="checkbox"><label for="pink"></label></div>
+                            </fieldset>
+                        </div>
+
+                        <div class="form-box__top_right">
+                            <fieldset class="form-box__fieldset_tipe">
+                                <legend class="form-box__title">Тип комнаты</legend>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe" id="cook"
+                                        type="checkbox" name="cook"><label class="form-box__label" for="cook">Кухня и
+                                        столовая</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe"
+                                        id="bathroom" type="checkbox" name="bathroom"><label class="form-box__label"
+                                        for="bathroom">Ванная
+                                        комната</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe" id="kids"
+                                        type="checkbox" name="kids"><label class="form-box__label" for="kids">Детская
+                                        комната</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe" id="ofic"
+                                        type="checkbox" name="ofic"><label class="form-box__label" for="ofic">Домашний
+                                        офис</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe"
+                                        id="living-room" type="checkbox" name="living-room"><label
+                                        class="form-box__label" for="living-room">Гостиная</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe" id="hall"
+                                        type="checkbox" name="hall"><label class="form-box__label"
+                                        for="hall">Прихожая</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe"
+                                        id="badroom" type="checkbox" name="badroom"><label class="form-box__label"
+                                        for="badroom">Спальня</label>
+                                </div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe" id="dress"
+                                        type="checkbox" name="dress"><label class="form-box__label"
+                                        for="dress">Гардероб</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe" id="house"
+                                        type="checkbox" name="house"><label class="form-box__label"
+                                        for="house">Дача</label></div>
+
+                                <div class="form-box__checkbox_hover"><input class="form-box__checkbox_tipe" id="light"
+                                        type="checkbox" name="light"><label class="form-box__label"
+                                        for="light">Свет</label></div>
+
+                            </fieldset>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-box__button">
+                    <button class="form__button">Применить</button>
+                </div>
+            </form>
+
+        </section>
+
+        <section class="product-box__catalog">
+
+            <div class="product-content">
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/1TATRAN.jpeg" alt="Кровать TATRAN">
+                    <h3 class="product__Name">Кровать TATRAN</h3>
+                    <p class="product__long">Основание из полированной нержавеющей стали, придает оригинальный парящий
+                        эффект.</p>
+                    <p class="product__price">120 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img class="product__img" src="img/4.2loungeVilora.jpg" alt="Кресло VILORA">
+                    <h3 class="product__Name">Кресло VILORA</h3>
+                    <p class="product__long">Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная
+                        на
+                        ощупь
+                        ткань.</p>
+                    <p class="product__price">21 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/3MENU.jpeg" alt="Стол MENU">
+                    <h3 class="product__Name">Стол MENU</h3>
+                    <p class="product__long">Европейский дуб - отличается особой прочностью и стабильностью.</p>
+                    <p class="product__price">34 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/4ASKESTA.jpeg" alt="Диван ASKESTA">
+                    <h3 class="product__Name">Диван ASKESTA</h3>
+                    <p class="product__long">Благодаря защелкивающемуся механизму диван легко раскладывается в
+                        комфортную кровать</p>
+                    <p class="product__price">68 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/5LUNAR.jpeg" alt="Кресло LUNAR">
+                    <h3 class="product__Name">Кресло LUNAR</h3>
+                    <p class="product__long">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
+                    <p class="product__price">40 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/6Nastan.jpeg" alt="Шкаф Nastan">
+                    <h3 class="product__Name">Шкаф Nastan</h3>
+                    <p class="product__long">Мебель может быть оснащена разнообразными системами подсветки.</p>
+                    <p class="product__price">80 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/1TATRAN.jpeg" alt="Кровать TATRAN">
+                    <h3 class="product__Name">Кровать TATRAN</h3>
+                    <p class="product__long">Основание из полированной нержавеющей стали, придает оригинальный парящий
+                        эффект.</p>
+                    <p class="product__price">120 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/4.2loungeVilora.jpg" alt="Кресло VILORA">
+                    <h3 class="product__Name">Кресло VILORA</h3>
+                    <p class="product__long">Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная
+                        на
+                        ощупь
+                        ткань.</p>
+                    <p class="product__price">21 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/3MENU.jpeg" alt="Стол MENU">
+                    <h3 class="product__Name">Стол MENU</h3>
+                    <p class="product__long">Европейский дуб - отличается особой прочностью и стабильностью.</p>
+                    <p class="product__price">34 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/4ASKESTA.jpeg" alt="Диван ASKESTA">
+                    <h3 class="product__Name">Диван ASKESTA</h3>
+                    <p class="product__long">Благодаря защелкивающемуся механизму диван легко раскладывается в
+                        комфортную кровать</p>
+                    <p class="product__price">68 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/5LUNAR.jpeg" alt="Кресло LUNAR">
+                    <h3 class="product__Name">Кресло LUNAR</h3>
+                    <p class="product__long">Прекрасно переносит солнечные лучи, перепады влажности и любые осадки</p>
+                    <p class="product__price">40 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+
+                <article class="product product-for-ikon">
+                    <img class="product__img" src="img/catalog/6Nastan.jpeg" alt="Шкаф Nastan">
+                    <h3 class="product__Name">Шкаф Nastan</h3>
+                    <p class="product__long">Мебель может быть оснащена разнообразными системами подсветки.</p>
+                    <p class="product__price">80 000 руб.</p>
+                    <div class="product-ikon">
+                        <img class="product-ikon-sale" src="img/ikon-sale-title.png" alt="Замок">
+                        <img class="product-ikon-heart" src="img/ikon-heart.png" alt="В избранное">
+                    </div>
+                </article>
+            </div>
+
+            <div class="product__catalog_more">
+                <a class="product__catalog_link" href="#">Показать ещё</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer center">
+        <img class="footer__img" src="img/logo-black.svg" alt="Логотип черный">
+        <div class="footer-menu">
+            <h4 class="footer__menu">Меню</h4>
+            <nav>
+                <ul class="footer-nav menu">
+                    <li><a class="footer__link" href="index.html">Главная</a></li>
+                    <li><a class="footer__link" href="Catalog.html">Каталог</a></li>
+                    <li><a class="footer__link" href="Cart.html">Корзина</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-menu footer-menu__contact">
+            <h4 class="footer__menu">Контакты</h4>
+            <nav>
+                <ul class="footer-nav menu">
+                    <li><a class="footer__link" href="tel:+79088008080">+7 908 800 80 80</a></li>
+                    <li><a class="footer__link" href="mailto:help@interier.com">help@interier.com</a></li>
+                    <li>
+                        <div class="footer__social">
+                            <a href="vk.svg"><svg viewBox="0 0 24.0005 14" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="24.000504" height="14.000000"
+                                    fill="none" customFrame="#000000" alt="Логотип ВКонтакте">
+                                    <path id="Vector"
+                                        d="M23.45 0.948C23.616 0.402 23.45 0 22.655 0L20.03 0C19.362 0 19.054 0.347 18.887 0.73C18.887 0.73 17.552 3.926 15.661 6.002C15.049 6.604 14.771 6.795 14.437 6.795C14.27 6.795 14.019 6.604 14.019 6.057L14.019 0.948C14.019 0.292 13.835 0 13.279 0L9.151 0C8.734 0 8.483 0.304 8.483 0.593C8.483 1.214 9.429 1.358 9.526 3.106L9.526 6.904C9.526 7.737 9.373 7.888 9.039 7.888C8.149 7.888 5.984 4.677 4.699 1.003C4.45 0.288 4.198 0 3.527 0L0.9 0C0.15 0 0 0.347 0 0.73C0 1.412 0.89 4.8 4.145 9.281C6.315 12.341 9.37 14 12.153 14C13.822 14 14.028 13.632 14.028 12.997L14.028 10.684C14.028 9.947 14.186 9.8 14.715 9.8C15.105 9.8 15.772 9.992 17.33 11.467C19.11 13.216 19.403 14 20.405 14L23.03 14C23.78 14 24.156 13.632 23.94 12.904C23.702 12.18 22.852 11.129 21.725 9.882C21.113 9.172 20.195 8.407 19.916 8.024C19.527 7.533 19.638 7.314 19.916 6.877C19.916 6.877 23.116 2.451 23.449 0.948L23.45 0.948Z"
+                                        fill="rgb(136.078,136.078,136.078)" fill-rule="evenodd"
+                                        class="footer__social_ikon" alt="Логотип ВКонтакте" />
+                                </svg>
+                                <!-- <img src="img/vk.svg" alt="Логотип ВКонтакте"> -->
+                            </a>
+                            <a href="telegram.svg">
+                                <svg viewBox="0 0 21 17.6757" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="21.000000" height="17.675659"
+                                    fill="none" customFrame="#000000" alt="Логотип Телеграм">
+                                    <path id="Vector"
+                                        d="M19.2952 0.200894L0.690166 7.4125C-0.0585332 7.74834 -0.311764 8.42087 0.509205 8.78587L5.28219 10.3105L16.8227 3.14143C17.4528 2.69136 18.0979 2.81137 17.5428 3.30647L7.63107 12.3272L7.31972 16.1448C7.6081 16.7342 8.13614 16.737 8.47296 16.444L11.2152 13.8359L15.9117 17.3709C17.0025 18.02 17.596 17.6011 17.8307 16.4114L20.9112 1.74952C21.231 0.285058 20.6856 -0.360199 19.2952 0.200894Z"
+                                        fill="rgb(136.078,136.078,136.078)" fill-rule="nonzero"
+                                        class="footer__social_ikon" alt="Логотип Телеграм" />
+                                </svg>
+                                <!-- <img src="img/telegram.svg" alt="Логотип Телеграм"> -->
+                            </a>
+                            <a href="dzen.svg"><svg viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="19.000000" height="18.000000"
+                                    fill="none" customFrame="#000000" alt="Логотип Дзен">
+                                    <path id="Vector"
+                                        d="M11.3321 10.7357C9.83927 12.195 9.7307 14.0143 9.60177 18C13.5239 18 16.2314 17.9871 17.6293 16.7014C18.9864 15.3771 19 12.69 19 9.09643C14.7928 9.225 12.8725 9.32143 11.3321 10.7357ZM-1.52588e-05 9.09643C-1.52588e-05 12.69 0.0135561 15.3771 1.3707 16.7014C2.76856 17.9871 5.47606 18 9.3982 18C9.26248 14.0143 9.1607 12.195 7.66784 10.7357C6.12749 9.32143 4.20713 9.21857 -1.52588e-05 9.09643ZM9.3982 0C5.48284 0 2.76856 0.0128571 1.3707 1.29857C0.0135561 2.62286 -1.52588e-05 5.31 -1.52588e-05 8.90357C4.20713 8.775 6.12749 8.67857 7.66784 7.26429C9.1607 5.805 9.26927 3.98571 9.3982 0ZM11.3321 7.26429C9.83927 5.805 9.7307 3.98571 9.60177 0C13.5239 0 16.2314 0.0128571 17.6293 1.29857C18.9864 2.62286 19 5.31 19 8.90357C14.7928 8.775 12.8725 8.67857 11.3321 7.26429Z"
+                                        fill="rgb(136.078,136.078,136.078)" fill-rule="nonzero"
+                                        class="footer__social_ikon" alt="Логотип Дзен" />
+                                </svg>
+                                <!-- <img src="img/dzen.svg" alt="Логотип Дзен"> -->
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="footer-form_mobil">
+            <form class="footer-form" action="#">
+                <p class="footer-form__news">Получайте наши новости и обновления</p>
+                <input placeholder="Ваш e-mail" class="footer-form__input" type="email">
+                <button class="footer__button">Подписаться</button>
+            </form>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

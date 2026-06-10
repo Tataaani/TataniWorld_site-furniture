@@ -1,0 +1,141 @@
+ /* стили для планшетов: Стартовая страница, Каталог и Корзина*/
+
+ @media (max-width: 1024px) {
+     .center {
+         padding-left: calc(50% - 786px/2);
+         padding-right: calc(50% - 786px/2);
+     }
+
+     .top-navigation {
+         .top-nav__form {
+             right: 2px;
+         }
+     }
+
+     .product-box {
+         .product-for__item {
+             height: 266px;
+         }
+
+         .product-content {
+             column-gap: 29px;
+             row-gap: 38px;
+         }
+     }
+
+     .product-box__cart {
+         display: flex;
+         flex-direction: column;
+         gap: 0px;
+
+         .cart {
+             &__article {
+                 margin-right: 0px;
+             }
+         }
+
+         .product__form {
+             margin-top: 64px;
+         }
+     }
+
+     .footer {
+         .footer__img {
+             display: none;
+         }
+
+         .footer-menu__contact {
+             margin-right: 180px;
+         }
+
+     }
+ }
+
+ @media (max-width: 833px) {
+     .center {
+         padding-left: 16px;
+         padding-right: 16px;
+     }
+
+     .product-box {
+
+         .product-content {
+             column-gap: 16px;
+             row-gap: 30px;
+             justify-content: center;
+         }
+
+         .product-content__spec_mobil {
+             justify-content: flex-start
+         }
+
+         .product {
+             width: 342.93px;
+         }
+
+         .product__Name {
+             font-size: 18px;
+             line-height: 22px;
+         }
+
+         .product__long {
+             margin-bottom: 8px;
+         }
+
+         .product__price {
+             font-size: 18px;
+             line-height: 22px;
+         }
+
+         .product-title {
+             font-size: 24px;
+             line-height: 29px;
+             padding-top: 48px;
+         }
+     }
+
+     .footer {
+         .footer-menu__contact {
+             margin-right: 130px;
+         }
+     }
+ }
+
+ @media (min-width:1025px) and (max-width:1200px) {
+     .center {
+         padding-left: calc(50% - 500px);
+         padding-right: calc(50% - 500px);
+     }
+
+     .product-box {
+         .product-content {
+             justify-content: center;
+             column-gap: 29px;
+             row-gap: 38px;
+         }
+
+         .product {
+             width: 311px;
+         }
+     }
+
+     .top-navigation {
+         .top-nav__form {
+             right: 0px;
+         }
+     }
+
+     .footer {
+         .footer__img {
+             margin-right: 140px;
+         }
+
+         .footer-menu {
+             margin-right: 110px;
+         }
+
+         .footer-menu__contact {
+             margin-right: 84px;
+         }
+     }
+ }

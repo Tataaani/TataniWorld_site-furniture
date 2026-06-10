@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.FormBoxTitle {
+    color: rgb(5, 5, 5);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.FormBoxLabel {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.top-navigation {
+    position: relative;
+
+    .top-nav__form {
+        position: absolute;
+        z-index: 1;
+        // width: 542px;
+        width: 445px;
+        // height: 548px;
+        height: 480px;
+        right: 242px;
+        top: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10;
+        padding: 40px 48px 40px 48px;
+        box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+        background: rgb(255, 255, 255);
+
+        .form-box {
+            position: static;
+            // width: 446px;
+            // height: 468px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+            .form-box__top {
+                display: flex;
+                gap: 65px;
+
+                .form-box__top_left {
+
+                    .form-box__fieldset {
+                        border: none;
+                        margin-bottom: 32px;
+                    }
+
+                    .form-box__title {
+                        @extend.FormBoxTitle
+                    }
+
+                    .form-box__label {
+                        @extend.FormBoxLabel
+                    }
+
+                    .form-box__fieldset_time {
+                        display: flex;
+                        gap: 14px;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+
+                        .form-box__radio {
+                            display: none;
+                        }
+
+                        .form-box__radio+.form-box__label {
+                            position: relative;
+                            padding-left: 29px;
+                            cursor: pointer;
+                        }
+
+                        .form-box__radio+.form-box__label:before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            width: 15px;
+                            height: 15px;
+                            box-sizing: border-box;
+                            border: 1px solid rgb(136, 136, 136);
+                            border-radius: 60px;
+                            top: 1px;
+                        }
+
+                        .form-box__radio:checked+.form-box__label:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 1px;
+                            width: 15px;
+                            height: 15px;
+                            box-sizing: border-box;
+                            border: 1px solid rgba(0, 0, 0, 1);
+                            border-radius: 60px;
+                            background-image: url(img/catalog/Form_Galka-input.png);
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+                    }
+
+                    .form-box__fieldset_price {
+
+                        .form-box__title_price {
+                            display: flex;
+                            gap: 14px;
+                        }
+
+                        .form-box__price {
+                            color: rgb(0, 0, 0);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 17px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+
+                        .form-box__range_slider {
+                            position: relative;
+                            width: 184px;
+                            height: 8px;
+                            margin-top: 14px;
+                        }
+
+                        .form-box__range_slider input[type="range"] {
+                            position: absolute;
+                            pointer-events: none;
+                            -webkit-appearance: none;
+                            appearance: none;
+                            background: none;
+                            height: 100%;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .form-box__range_slider input[type="range"]::-webkit-slider-thumb {
+                            pointer-events: all;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: rgb(0, 0, 0);
+                            cursor: pointer;
+                            -webkit-appearance: none;
+                        }
+
+                        .form-box__range_slider input[type="range"]::-moz-range-thumb {
+                            pointer-events: all;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: rgb(0, 0, 0);
+                            cursor: pointer;
+                        }
+
+                        .form-box__range_slider input[type="range"]::-ms-thumb {
+                            pointer-events: all;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: rgb(0, 0, 0);
+                            cursor: pointer;
+                        }
+
+                        .form-box__range_slider input[type="range"]::-webkit-slider-runnable-track {
+                            width: 182px;
+                            height: 0px;
+                            // left: 0.39px;
+                            // right: 0.39px;
+                            // top: 4.5px;
+                            cursor: pointer;
+                            border: none;
+                        }
+
+                        .form-box__range_slider input[type="range"]::-moz-range-track {
+                            width: 182px;
+                            height: 0px;
+                            // left: 0.39px;
+                            // right: 0.39px;
+                            // top: 4.5px;
+                            cursor: pointer;
+                            border: none;
+                        }
+
+                        .form-box__range_slider input[type="range"]::-ms-track {
+                            width: 182px;
+                            height: 0px;
+                            // left: 0.39px;
+                            // right: 0.39px;
+                            // top: 4.5px;
+                            cursor: pointer;
+                            border: none;
+                        }
+
+                        .form-box__range_track-fill {
+                            position: absolute;
+                            top: 7px;
+                            left: 0.39px;
+                            right: 0.39px;
+                            width: 180px;
+                            height: 0px;
+                            border-radius: 3px;
+                            border: 1px solid rgb(0, 0, 0);
+                        }
+                    }
+
+                    .form-box__fieldset_color {
+                        width: 189px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 14px;
+
+                        .form-box__checkbox_color {
+                            display: none;
+                        }
+
+                        .form-box__checkbox_color+label {
+                            position: relative;
+                            padding-right: 14px;
+                            cursor: pointer;
+                        }
+
+
+                        .form-box__checkbox_color+label:before {
+                            content: "";
+                            position: absolute;
+                            width: 15px;
+                            height: 15px;
+
+                        }
+
+                        .form-box__checkbox_white+label:before {
+                            box-sizing: border-box;
+                            border: 1px solid rgb(136, 136, 136);
+                            background: rgb(255, 255, 255);
+                        }
+
+                        .form-box__checkbox_black+label:before {
+
+                            background: rgb(0, 0, 0);
+                        }
+
+                        .form-box__checkbox_grey+label:before {
+                            background: rgb(115, 115, 115);
+                        }
+
+                        .form-box__checkbox_red+label:before {
+                            background: rgb(255, 0, 0);
+                        }
+
+                        .form-box__checkbox_orange+label:before {
+                            background: rgb(255, 122, 65);
+                        }
+
+                        .form-box__checkbox_yellow+label:before {
+                            background: rgb(242, 203, 1);
+                        }
+
+                        .form-box__checkbox_green+label:before {
+                            background: rgb(0, 191, 42);
+                        }
+
+                        .form-box__checkbox_lightgreen+label:before {
+                            background: rgb(28, 204, 151);
+                        }
+
+                        .form-box__checkbox_lightblue+label:before {
+                            background: rgb(0, 159, 227);
+                        }
+
+                        .form-box__checkbox_blue+label:before {
+                            background: rgb(0, 10, 248);
+                        }
+
+                        .form-box__checkbox_purple+label:before {
+                            background: rgb(103, 16, 214);
+                        }
+
+                        .form-box__checkbox_lilac+label:before {
+                            background: rgb(157, 13, 181);
+                        }
+
+                        .form-box__checkbox_lightlilac+label:before {
+                            background: rgb(216, 154, 255);
+                        }
+
+                        .form-box__checkbox_pink+label:before {
+                            background: rgb(255, 101, 166);
+
+                        }
+
+                        .form-box__checkbox_color:checked+label:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            width: 15px;
+                            height: 15px;
+                            box-sizing: border-box;
+                            border: 1px solid rgb(0, 0, 0);
+                            background-image: url(img/catalog/Form_Galka-input.png);
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+
+                        .form-box__checkbox_black:checked+label:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            width: 15px;
+                            height: 15px;
+                            box-sizing: border-box;
+                            border: 1px solid rgb(0, 0, 0);
+                            background-image: url(img/catalog/Form_Galka-input-white.png);
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+                    }
+                }
+
+                .form-box__top_right {
+
+                    .form-box__fieldset_tipe {
+                        border: none;
+                        // margin-bottom: 32px;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        gap: 14px;
+
+                    }
+
+                    .form-box__title {
+                        color: rgb(5, 5, 5);
+                        font-family: Montserrat;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        margin-bottom: 14px;
+                    }
+
+                    .form-box__label {
+                        @extend.FormBoxLabel
+                    }
+
+                    .form-box__checkbox_tipe {
+                        display: none;
+                    }
+
+                    .form-box__checkbox_tipe+.form-box__label {
+                        position: relative;
+                        padding-left: 29px;
+                        cursor: pointer;
+                    }
+
+                    .form-box__checkbox_tipe+.form-box__label:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 15px;
+                        height: 15px;
+                        box-sizing: border-box;
+                        border: 1px solid rgb(136, 136, 136);
+                        top: 1px;
+                    }
+
+                    .form-box__checkbox_tipe:checked+.form-box__label:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 15px;
+                        height: 15px;
+                        box-sizing: border-box;
+                        border: 1px solid rgb(0, 0, 0);
+                        top: 1px;
+                        background-image: url(img/catalog/Form_Galka-input.png);
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                }
+            }
+
+        }
+
+        .form-box__button {
+            // margin-top: 36px;
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 255px;
+
+            .form__button {
+                position: relative;
+                width: 190px;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10;
+                padding: 10px 76px 10px 76px;
+                box-sizing: border-box;
+                border: 1px solid rgb(4, 4, 4);
+                border-radius: 20px;
+                background-color: transparent;
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0px;
+                // text-align: center;
+                font: inherit;
+                transition: all 1s;
+            }
+
+            .form__button:hover {
+                cursor: pointer;
+                background-color: var(--Color - 7, rgba(0, 0, 0, 1));
+                color: rgba(255, 255, 255, 1)
+            }
+        }
+    }
+}
+
+.form-box__button {
+    // margin-top: 36px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 255px;
+
+    .form__button {
+        position: relative;
+        width: 190px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10;
+        padding: 10px 76px 10px 76px;
+        box-sizing: border-box;
+        border: 1px solid rgb(4, 4, 4);
+        border-radius: 20px;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        // text-align: center;
+        font: inherit;
+        transition: all 1s;
+    }
+
+    .form__button:hover {
+        cursor: pointer;
+        background-color: var(--Color - 7, rgba(0, 0, 0, 1));
+        color: rgba(255, 255, 255, 1)
+    }
+}

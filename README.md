@@ -4,8 +4,8 @@
 
 ## 📷 Скриншоты и Демо
 Вы можете посмотреть работающий интернет-магазин вживую по этой ссылке: [открыть сайт «Интерьер.»](https://tataaani.github.io/TataniWorld_site-furniture/)
-![Главная страница сайта](Furniture%20website%20Interior/img/furniture_website1.jpg)
-![Страница каталога](Furniture%20website%20Interior/img/furniture_website2.jpg)
+![Главная страница сайта](img/furniture_website1.jpg)
+![Страница каталога](img/furniture_website2.jpg)
 
 
 ## ✨ Главные особенности проекта
